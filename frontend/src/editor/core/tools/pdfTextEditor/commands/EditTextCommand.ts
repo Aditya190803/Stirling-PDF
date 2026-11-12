@@ -722,6 +722,7 @@ export class EditTextCommand implements Command {
                 m,
                 prevSlot.mergedFromPtrs[op.subRunIdx],
                 prevSlot.mergedFromTexts[op.subRunIdx] ?? "",
+                { pagePtr: page.pagePtr, docPtr: doc.docPtr },
               );
             }
           }
@@ -775,6 +776,7 @@ export class EditTextCommand implements Command {
             m,
             this.prevMergedFromPtrs[op.subRunIdx],
             this.prevMergedFromTexts[op.subRunIdx] ?? "",
+            { pagePtr: page.pagePtr, docPtr: doc.docPtr },
           );
         }
       }
